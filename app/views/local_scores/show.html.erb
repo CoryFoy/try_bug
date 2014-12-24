@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @local_score.game %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @local_score.score %>
+</p>
+
+<%= link_to 'Edit', edit_local_score_path(@local_score) %> |
+<%= link_to 'Back', local_scores_path %>

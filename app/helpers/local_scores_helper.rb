@@ -1,0 +1,2 @@
+module LocalScoresHelper
+end

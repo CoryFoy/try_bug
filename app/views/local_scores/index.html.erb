@@ -1,0 +1,27 @@
+<h1>Listing local_scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @local_scores.each do |local_score| %>
+      <tr>
+        <td><%= local_score.game %></td>
+        <td><%= local_score.score %></td>
+        <td><%= link_to 'Show', local_score %></td>
+        <td><%= link_to 'Edit', edit_local_score_path(local_score) %></td>
+        <td><%= link_to 'Destroy', local_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Local score', new_local_score_path %>

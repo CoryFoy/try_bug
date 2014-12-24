@@ -1,0 +1,27 @@
+<h1>Listing official_scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>High score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @official_scores.each do |official_score| %>
+      <tr>
+        <td><%= official_score.game %></td>
+        <td><%= official_score.high_score %></td>
+        <td><%= link_to 'Show', official_score %></td>
+        <td><%= link_to 'Edit', edit_official_score_path(official_score) %></td>
+        <td><%= link_to 'Destroy', official_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Official score', new_official_score_path %>
